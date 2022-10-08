@@ -1,3 +1,10 @@
+.main-bg{
+  height: 300px;
+  background-image: url('./img/church.webp');
+  background-size: cover ;
+  background-position: center;
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +12,57 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.start {
+  opacity : 0
+}
+.end {
+  opacity : 1;
+  transition : opacity 0.5s;
+}
+.orderButton{
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  color: white;
+}
+.orderButton:hover{
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.orderButton:active{
+  transform: scale(1.5);
+}
+
+.watchedItemList{
+  width: 200px;
+  position: absolute;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  right: 10px;
+
+}
+
+.watchedItem{
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,3 +94,4 @@
     transform: rotate(360deg);
   }
 }
+
